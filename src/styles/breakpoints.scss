@@ -1,0 +1,83 @@
+$bp-smartphones: 480px;
+$bp-mobile: 542px;
+$bp-tablet: 768px;
+$bp-middle: 925px;
+$bp-tablethd: 1024px;
+$bp-ultra: 1281px;
+
+$max-width-section: 100%;
+
+
+/* Desktops  - Screen = 1281px HQ */
+@media (min-width: $bp-ultra) {
+  
+  /* CSS */
+  
+}
+  
+/* Laptops, Desktops - Screen= 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+@media (min-width: $bp-middle) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+ /* Tablets, Ipads (portrait) - Screen = 768px to 1024px*/
+@media (min-width: $bp-tablet) and (max-width: $bp-tablethd) {
+  
+  /* CSS */
+  
+}
+ /* Tablets, Ipads (landscape) - Screen =  768px to 1024px*/
+@media (min-width: $bp-tablet) and (max-width: $bp-tablethd) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+ /* Low Resolution Tablets, Mobiles (Landscape) - Screen = 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  
+}
+ /* Smartphones Mobiles (Portrait) - Screen = 320px to 479px*/
+@media (min-width: 320px) and (max-width: $bp-smartphones) {
+  
+  /* CSS */
+  
+}
+/*image responsive*/
+.image-example-responsive {
+     width: 100%; //max-width idealmente
+     height: auto;
+ }
+/* para texto usar vw -> font-size: 4vw;
+
+/*respnsive container div container con div de secciones*/ 
+.container-div-responsive {
+ display: flex;
+ flex-wrap: wrap;
+}
+.seccion-responsive-1, .seccion-responsive-2, .seccion-responsive-2 {
+ width: 100%;
+ height: 215px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 22px;
+ font-weight: 700;
+}
+.seccion-responsive-1 {
+ background: lightgreen;
+}
+.seccion-responsive-2 {
+ background: lightblue;
+}
+.seccion-responsive-3 {
+ background: lightsalmon;
+}
