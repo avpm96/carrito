@@ -44,26 +44,26 @@ export const FormCreate = ({}) => {
         <form onSubmit={handleSend}>
           <div className="form-group">
             <h3 className="title">Create a new product</h3>
-            <label htmlFor="name">Nombre</label>
+            <label htmlFor="name">Name</label>
             <input
               className="imput-group"
               type="text"
               id="name"
               name="name"
-              placeholder="Ingresa el nombre del producto"
+              placeholder="Enter the product name"
               required
               value={name}
               onChange={handleInputChange}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="price">Precio</label>
+            <label htmlFor="price">Price</label>
             <input
               className="imput-group"
               type="number"
               id="price"
               name="price"
-              placeholder="Ingresa el precio del producto"
+              placeholder="Enter the price of the product"
               min="0"
               step="0.01"
               required
@@ -72,13 +72,13 @@ export const FormCreate = ({}) => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="image">Imagen</label>
+            <label htmlFor="image">Image</label>
             <input
               className="imput-group"
               type="text"
               id="img"
               name="img"
-              placeholder="Ingresa l url de la imagen"
+              placeholder="Enter the url of the image"
               required
               value={img}
               onChange={handleInputChange}
@@ -91,7 +91,7 @@ export const FormCreate = ({}) => {
               type="number"
               id="amount"
               name="amount"
-              placeholder="Ingresa la cantidad de productos disponibles"
+              placeholder="Enter the number of products available"
               min="0"
               required
               value={amount}
@@ -100,7 +100,7 @@ export const FormCreate = ({}) => {
           </div>
 
           <button type="submit" className="button">
-            Enviar
+          Create
           </button>
         </form>
       </div>

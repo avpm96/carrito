@@ -98,11 +98,11 @@ export const Header = ({
               </div>
 
               <button className="btn-clear-all" onClick={onCleanCart}>
-                Vaciar Carrito
+              Empty cart
               </button>
             </>
           ) : (
-            <p className="cart-empty">El carrito está vacío</p>
+            <p className="cart-empty">The cart is empty</p>
           )}
         </div>
       </div>
