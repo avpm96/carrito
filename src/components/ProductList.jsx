@@ -75,7 +75,7 @@ export const ProductList = ({
                 className="btnForm"
                 onClick={() => onMinusProduct(product)}
               >
-                Remove to cart
+                Remove from cart
               </button>
           </div>
         </div>
