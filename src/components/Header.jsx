@@ -29,10 +29,12 @@ export const Header = ({
 
   return (
     <header>
-      <Link to="create">Home</Link>
+   
 
       <h1>Grocery Store</h1>
-      <div></div>
+      <div>
+      
+      </div>
       <div className="container-icon">
         <div className="container-cart-icon" onClick={() => setActive(!active)}>
           <svg

@@ -3,7 +3,7 @@ import style from "./FormCreate.scss";
 import { useContext, useState } from "react";
 import { ProductContext } from "../../context/ProductContext";
 import { useForm } from "../../hooks/useForm";
-
+import { Link } from "react-router-dom";
 export const FormCreate = ({}) => {
   const { productList, setProductList } = useContext(ProductContext);
 
@@ -12,29 +12,38 @@ export const FormCreate = ({}) => {
     price: "",
     img: "",
     amount: "",
-    quantity: "",
+    quantity: "1",
   });
   const { name, price, img, amount, quantity } = formValues;
   const handleSend = (e) => {
     e.preventDefault();
-    const templateParams = {
-      name,
-      price,
-      amount,
-      img,
-      quantity,
-    };
+    const templateParams = [
+      {
+        name,
+        price: parseInt(price),
+        amount: parseInt(amount),
+        img,
+        quantity: parseInt(quantity),
+        id: productList.length + 1,
+      },
+    ];
 
-    setProductList([templateParams]);
-    console.log(templateParams);
+    const newProductList = [...templateParams, ...productList];
+
+    setProductList(newProductList);
+    alert("Producto creado con exito!");
+    reset();
   };
   return (
     <>
-      <h1 className="h1">Create a new product</h1>
+      <div className="link-title">
+        <Link to="/">Back to Home</Link>
+      </div>
 
       <div className="contenedor">
         <form onSubmit={handleSend}>
           <div className="form-group">
+            <h3 className="title">Create a new product</h3>
             <label htmlFor="name">Nombre</label>
             <input
               className="imput-group"
@@ -89,20 +98,7 @@ export const FormCreate = ({}) => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="quantity">Cantidad</label>
-            <input
-              className="imput-group"
-              type="number"
-              id="quantity"
-              name="quantity"
-              placeholder="Ingresa la cantidad de productos a comprar"
-              min="1"
-              required
-              value={quantity}
-              onChange={handleInputChange}
-            />
-          </div>
+
           <button type="submit" className="button">
             Enviar
           </button>

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState,useContext } from "react";
 import { products } from "../data";
-
+import { ProductContext } from "../context/ProductContext";
 export const ProductList = ({
   allProducts,
   setAllProducts,
@@ -12,7 +12,7 @@ export const ProductList = ({
   setStock,
 }) => {
  
-  const [inCart, setInCart] = useState(false);
+  const { productList, setProductList } = useContext(ProductContext);
   const onAddProduct = (product) => {
     if (allProducts.find((item) => item.id === product.id)) {
       const products = allProducts.map((item) =>
@@ -32,7 +32,6 @@ export const ProductList = ({
       setTotal(total + product.price * product.quantity);
       setCountProducts(countProducts + product.quantity);
       setStock(product.amount--);
-      setInCart(true);
       setAllProducts([...allProducts, product]);
     }
   };
@@ -60,7 +59,7 @@ export const ProductList = ({
 
   return (
     <div className="container-cards">
-      {products.map((product) => (
+      {productList.map((product) => (
         <div className="card" key={product.id}>
           <figure>
             <img src={product.img} alt={product.nameProduct} />

@@ -1,67 +1,85 @@
 @import "/src/styles/colors.scss";
-.h1{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-.contenedor{
-    width: 500px;
- 
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'calibri';
-    color: $black;
-    box-shadow: 7px 13px 30px $blue4;
-}
-  
+@import "/src/styles/breakpoints.scss";
+body {
+  background-color: #e5e5f7;
 
-.form{
-	width:300px;
-	padding:16px;
-	border-radius:10px;
-	margin:auto;
-	background-color:#ccc;
+  background-image: radial-gradient(
+      $purple 0.6000000000000001px,
+      transparent 0.6000000000000001px
+    ),
+    radial-gradient($purple 0.6000000000000001px, #e5e5f7 0.6000000000000001px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
 }
-form label{
-	
-	font-weight:bold;
-	display:inline-block;
-    color: $purple;
+.link-title {
+  margin: 10 auto;
+  font-family: "Nunito", sans-serif;
+  color: $blue2;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-top: 50px;
+}
+.title {
+  text-align: center;
+  color: #012970;
+}
+.contenedor {
+  width: 90%;
+  max-width: 400px;
+  background-color: $white;
+  padding: 30px;
+  margin: auto;
 
+  border-radius: 10px;
+  font-family: "calibri";
+  color: $black;
+  box-shadow: 7px 13px 30px $blue4;
+}
+
+.form {
+  width: 90%;
+  max-width: 400px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #ccc;
+}
+form label {
+  font-weight: bold;
+  display: inline-block;
+  color: $purple;
 }
 .form-group {
-    margin: 10px;
-  }
-  .imput-group{
-    width: 100%;
-    background: white;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';
-    font-size: 18px;
-    color: $black;
-  }
+  margin: 10px;
+}
+.imput-group {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: "calibri";
+  font-size: 18px;
+  color: $black;
+}
 
-  label {
-    display: block;
-    font-weight: bold;
-    font-size: 20px;
-  }
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-  input {
-    display: block;
-    width: 80%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+input {
+  display: block;
+  width: 80%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-  .button {
-    font-family: "Nunito", sans-serif;
+.button {
+  font-family: "Nunito", sans-serif;
   border: none;
   width: 90%;
   padding: 12px;
@@ -73,4 +91,76 @@ form label{
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 10px;
+}
+@media (min-width: $bp-middle) and (max-width: 1280px) and (orientation: landscape) {
+  .card {
+    background-color: $blue;
   }
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: $bp-tablet) and (max-width: $bp-tablethd) {
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (min-width: $bp-tablet) and (max-width: $bp-tablethd) and (orientation: landscape) {
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .card {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 320px) and (max-width: $bp-smartphones) {
+  .card {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 658px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 712px) and (max-width: 1138px) {
+}
+
+@media (min-width: 412px) and (max-width: 896px) {
+}
+
+@media (min-width: 912px) and (max-width: 1368px) {
+}
+
+@media (min-width: 540px) and (max-width: 720px) {
+}
+@media (min-width: 412px) and (max-width: 914px) {
+}
+
+@media (min-width: 412px) and (max-width: 915px) and (-webkit-min-device-pixel-ratio: 2.625) {
+  .contenedor {
+    padding: 2rem 0rem 2rem 0rem;
+    max-width: 100%;
+    margin-left: 0rem;
+  }
+}

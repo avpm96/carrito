@@ -12,9 +12,18 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   font-family: "Nunito", sans-serif;
-  color: #012970;
+  color: $blue2;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-
+.link {
+  margin: 10 auto;
+  font-family: "Nunito", sans-serif;
+  color: $blue2;
+  padding-bottom: 40px;
+  padding-left: 10px;
+}
 .icon-cart {
   width: 40px;
   height: 40px;
@@ -46,7 +55,7 @@ header {
   right: 0;
 
   background-color: $purple;
-  color: #fff;
+  color: $white;
   width: 25px;
   height: 25px;
 
@@ -62,10 +71,10 @@ header {
 
 .container-cart-products {
   position: absolute;
-  top: 50px;
+  top: 100px;
   right: 0;
 
-  background-color: #fff;
+  background-color: $white;
   width: 400px;
   z-index: 1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -186,15 +195,6 @@ header {
   font-weight: 900;
 }
 
-//.info-product button {
-//	border: none;
-//	background: none;
-//	background-color: #000;
-//	color: #fff;
-//	padding: 15px 10px;
-//	cursor: pointer;
-//}
-
 .cart-empty {
   padding: 20px;
   text-align: center;
@@ -256,11 +256,7 @@ header {
   border-radius: 10px;
 }
 @media (min-width: $bp-middle) and (max-width: 1280px) and (orientation: landscape) {
-  .card {
-    padding-right: 40px;
-    padding-left: 30px;
-    background-color: $blue;
-  }
+  
   .container-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -268,7 +264,6 @@ header {
   }
 }
 @media (min-width: $bp-tablet) and (max-width: $bp-tablethd) {
-  
   .container-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -278,11 +273,6 @@ header {
   }
 }
 @media (min-width: $bp-tablet) and (max-width: $bp-tablethd) and (orientation: landscape) {
-  .card {
-    padding-right: 40px;
-    padding-left: 30px;
-    
-  }
   .container-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -292,9 +282,7 @@ header {
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  .card {
-    padding: 2rem 2rem 2rem 2rem;
-  }
+ 
   .container-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -302,14 +290,10 @@ header {
   }
 }
 @media (min-width: 320px) and (max-width: $bp-smartphones) {
-  .card {
-    padding: 2rem 2rem 2rem 2rem;
-  }
+  
 }
 @media (min-width: 320px) and (max-width: 658px) {
-  .card {
-    padding: 2rem 2.4rem 2rem 2.4rem;
-  }
+  
   .container-cards {
     display: grid;
     grid-template-columns: repeat(1, 2fr);
@@ -318,48 +302,24 @@ header {
 }
 
 @media (min-width: 712px) and (max-width: 1138px) {
-  .card {
-    padding: 2rem 2rem 2rem 2rem;
-  }
+  
 }
 
 @media (min-width: 412px) and (max-width: 896px) {
-  .card {
-    padding: 2rem 2rem 2rem 2rem;
-    margin-left: 0rem;
-    max-width: 100%;
-    width: 100%;
-  }
+ 
 }
 
 @media (min-width: 912px) and (max-width: 1368px) {
-  .card {
-    padding: 2rem 1rem 2rem 1rem !important;
-    margin-left: 0rem;
-    max-width: 100% !important;
-    width: 100%;
-  }
+ 
 }
 
 @media (min-width: 540px) and (max-width: 720px) {
-  .card {
-    width: 100%;
-    padding: 2rem 2rem 2rem 2rem;
-    margin-left: 0rem;
-  }
+  
 }
 @media (min-width: 412px) and (max-width: 914px) {
-  .card {
-    padding: 2rem 0rem 2rem 0rem;
-    max-width: 100%;
-    margin-left: 0rem;
-  }
+ 
 }
 
 @media (min-width: 412px) and (max-width: 915px) and (-webkit-min-device-pixel-ratio: 2.625) {
-  .card {
-    padding: 2rem 0rem 2rem 0rem;
-    max-width: 100%;
-    margin-left: 0rem;
-  }
+  
 }
