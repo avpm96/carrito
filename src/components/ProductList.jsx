@@ -23,7 +23,7 @@ export const ProductList = ({
         setTotal(total + product.price * product.quantity);
         setCountProducts(countProducts + product.quantity);
         setStock(product.amount--);
-        setInCart(true);
+    
       }
 
       return setAllProducts([...products]);
@@ -45,7 +45,7 @@ export const ProductList = ({
         setTotal(total - product.price * product.quantity);
         setCountProducts(countProducts - product.quantity);
         setStock(product.amount++);
-        setInCart(false);
+     
         return setAllProducts([...products]);
       }
     }
@@ -72,16 +72,12 @@ export const ProductList = ({
             <button className="btnForm" onClick={() => onAddProduct(product)}>
               Add to cart 
             </button>
-            {inCart ? (
-              <button
+            <button
                 className="btnForm"
                 onClick={() => onMinusProduct(product)}
               >
                 Remove to cart
               </button>
-            ) : (
-              ""
-            )}
           </div>
         </div>
       ))}

@@ -1,0 +1,76 @@
+@import "/src/styles/colors.scss";
+.h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.contenedor{
+    width: 500px;
+ 
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: $black;
+    box-shadow: 7px 13px 30px $blue4;
+}
+  
+
+.form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+form label{
+	
+	font-weight:bold;
+	display:inline-block;
+    color: $purple;
+
+}
+.form-group {
+    margin: 10px;
+  }
+  .imput-group{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: $black;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  input {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .button {
+    font-family: "Nunito", sans-serif;
+  border: none;
+  width: 90%;
+  padding: 12px;
+  margin: 0.6vw;
+  background-color: $blue;
+  font-size: 1.1rem;
+  color: $white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  }

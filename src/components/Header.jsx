@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 export const Header = ({
   allProducts,
   setAllProducts,
@@ -17,6 +17,7 @@ export const Header = ({
 
     setTotal(total - product.price * product.quantity);
     setCountProducts(countProducts - product.quantity);
+    setStock(product.amount++);
     setAllProducts(results);
   };
 
@@ -24,13 +25,14 @@ export const Header = ({
     setAllProducts([]);
     setTotal(0);
     setCountProducts(0);
-	
   };
 
   return (
     <header>
-      <h1>Grocery Store</h1>
+      <Link to="create">Home</Link>
 
+      <h1>Grocery Store</h1>
+      <div></div>
       <div className="container-icon">
         <div className="container-cart-icon" onClick={() => setActive(!active)}>
           <svg
